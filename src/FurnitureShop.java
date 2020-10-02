@@ -6,15 +6,19 @@ public class FurnitureShop {
             this.ch[i] = ch[i];
             this.stol[i] = stol[i];
         }
-      /*  ch[0] = new Chair(100, 1000, "green", "black");
-        ch[1] = new Chair(10, 2000, "white", "black");
-        ch[2] = new Chair(100, 1500, "purple", "black");
-        stol[0] =*/
     }
     public void StoreInfo(){
         for (int i = 0; i < 3; i++) {
             System.out.println("Кресло "+ i+" : " + ch[i].Info());
             System.out.println("Стол "+ i+" : " + stol[i].Info());
         }
+    }
+    public Chair BuyChair(int n){
+        System.out.println("Кресло "+ n+" : " + ch[n].Info());
+        return (ch[n]);
+
+    }
+    public Table BuyTable(int n){
+        return (stol[n]);
     }
 }

@@ -1,5 +1,5 @@
 public class Person {
-
+    private static Basket personalGarbage = new Basket();
     private static FurnitureShop f1 = new FurnitureShop();
     public void Createshop(){
         Chair[] ch1 = new Chair[3];
@@ -13,8 +13,12 @@ public class Person {
         f1.FUllShop(ch1, stol1);
         f1.StoreInfo();
     }
+
     public static void main(String[] args){
         Person human1 = new Person();
         human1.Createshop();
+        personalGarbage.addToBasketCh(f1.BuyChair(2));
+        personalGarbage.addToBasketSt(f1.BuyTable(1));
+        personalGarbage.BasketInfo();
     }
 }
